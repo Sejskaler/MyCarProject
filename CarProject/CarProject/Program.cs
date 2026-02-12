@@ -91,17 +91,17 @@ namespace CarProject
 
             }
             //skriv det hele ud
-            Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {pris}");
+            Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {Math.Round(pris)}");
 
             //try with string  format, it takes {0} etc. as the variables IN ORDER
-            Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, pris));
-            // Table headers
-            Console.WriteLine("Brændstof".PadRight(10) + "Distance".PadLeft(15) + "Pris".PadLeft(20));
-
+            Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, Math.Round(pris)));
+            //Overskrift
+            Console.WriteLine("Brændstof".PadRight(15) + "Distance".PadRight(15) + "Pris".PadRight(15));
+            //add linjer
             Console.WriteLine(new string('-', 35));
 
-            // Table rows
-            Console.WriteLine( braendstof.PadRight(15) + distance.ToString().PadLeft(10) + pris.ToString().PadLeft(30));
+            //rækker
+            Console.WriteLine( braendstof.PadRight(15) + distance.ToString().PadRight(15) + Math.Round(pris).ToString().PadRight(15));
 
         }
 
