@@ -9,7 +9,7 @@ namespace CarProject
             double distance;
             double kmPerLiter;
             int kilometerStand;
-            double braendstofspris;
+            double braendstofspris = 0;
             double pris = 0;
 
             //kmperliter - loopet er brugt 3 gange
@@ -53,41 +53,63 @@ namespace CarProject
 
 
             //gøres lidt anderledes med benz og diesel
-            Console.WriteLine("benzin eller diesel?");
+            Console.WriteLine("benzin, diesel eller diesel?");
             string braendstof = Console.ReadLine();
 
             while (true)
             {
                 //hvis det ikke er benzin og det ikke er diesel
-                if (braendstof.ToLower() != "benzin" && braendstof.ToLower() != "diesel")
+                if (braendstof.ToLower() != "benzin" && braendstof.ToLower() != "diesel" && braendstof.ToLower() != "el")
                 {
                     //så skriv det lige igen
-                    Console.Write("skriv lige benzin eller diesel: ");
+                    Console.Write("skriv lige benzin, diesel eller el: ");
                     braendstof = Console.ReadLine();
                 }
                 else
+                {
                 //hvis det er, så beregn prisen
-                {             
-                    //udregn pris
-                    if (braendstof.ToLower() == "diesel")
+                switch (braendstof.ToLower())
                     {
-                        braendstofspris = 12.29;
-                        //benyt funktionen Beregning
-                        pris = Beregning(kmPerLiter, braendstofspris, distance);
+                        case "benzin":
+                            braendstofspris = 13.49;
+                            break;
+                        case "diesel":
+                            braendstofspris = 12.29;
+                            break;
+                        case "el":
+                            braendstofspris = 1.12;
+                            break;
+                        default:
+                            Console.WriteLine("fejl");
+                            return;
                     }
-                    else if (braendstof.ToLower() == "benzin")
-                    {
-                        braendstofspris = 13.49;
-                        pris = Beregning(kmPerLiter, braendstofspris, distance);
-                    }
-                    else
-                    {
-                        //det her sker aldrig, men hvis det gør, så skriv en fejl. Det vil den gøre for evigt, det her bør egentligt få et break og returne nothing for ikke at få et inf. loop
-                        Console.WriteLine("fejl");
-                    }
-                    //hvis det har lykkedes os at udregne, så break
-                    break; 
+                    // Herunder er den originale if version, den kan ikke rigtig uddybes, derfor added switch. Den skal selvfølgelig være i else
+                    /*{             
+                       //udregn pris
+                        if (braendstof.ToLower() == "diesel")
+                        {
+                            braendstofspris = 12.29;
+                            //benyt funktionen Beregning
+                            pris = Beregning(kmPerLiter, braendstofspris, distance);
+                        }
+                        else if (braendstof.ToLower() == "benzin")
+                        {
+                            braendstofspris = 13.49;
+                            pris = Beregning(kmPerLiter, braendstofspris, distance);
+                        }
+                        else
+                        {
+                            //det her sker aldrig, men hvis det gør, så skriv en fejl. Det vil den gøre for evigt, det her bør egentligt få et break og returne nothing for ikke at få et inf. loop
+                            Console.WriteLine("fejl");
+                        }
+                        //hvis det har lykkedes os at udregne, så break
+                        break; 
+                    }*/
+
                 }
+                pris = Beregning(kmPerLiter, braendstofspris, distance);
+                break;
+
 
             }
             //skriv det hele ud
