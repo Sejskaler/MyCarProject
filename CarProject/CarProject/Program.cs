@@ -94,7 +94,7 @@ namespace CarProject
             Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {pris}");
 
             //try with string  format, it takes {0} etc. as the variables IN ORDER
-            Console.WriteLine(String.Format("Brændstofstype: {0}, km/l: {1}, oprindelig km stand: {2} ny kilometerstand {3} det koster: {4}", braendstof, kmPerLiter, kilometerStand, (kilometerStand + distance), pris));
+            Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, pris));
         }
 
         //lav beregningerne baseret på det der bliver parsed ind og return prisen
