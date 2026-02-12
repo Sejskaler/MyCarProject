@@ -108,4 +108,4 @@ namespace CarProject
         }
     }
 
-dette er en test
+Console.WriteLine("HEJ");
