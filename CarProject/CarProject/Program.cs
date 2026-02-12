@@ -4,10 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("benzin eller diesel?");
-            string braendstof = Console.ReadLine();
+            double distance;
             double kmPerLiter;
             int kilometerStand;
+            double braendstofspris;
+            double pris = 0;
 
             //kmperliter
             while (true)
@@ -20,7 +21,18 @@
 
                 Console.WriteLine("Det er ikke et nummer");
             }
-//kilometerstand
+            //distance
+            while (true)
+            {
+                Console.Write("distance: ");
+                string distanceInput = Console.ReadLine();
+
+                if (double.TryParse(distanceInput, out distance))
+                    break;
+
+                Console.WriteLine("Det er ikke et nummer");
+            }
+            //kilometerstand
             while (true)
             {
                 Console.Write("Kilometerstand: ");
@@ -31,22 +43,49 @@
 
                 Console.WriteLine("Det er ikke et nummer");
             }
-            double pris = Beregning(kmPerLiter, braendstof);
-            Console.WriteLine($"{pris}");
+
+            Console.Write("benzin eller diesel?");
+            string braendstof = Console.ReadLine();
+
+            while (true)
+            {
+                if (braendstof.ToLower() != "benzin" && braendstof.ToLower() != "diesel")
+                {
+                    Console.WriteLine("skriv lige benzin eller diesel");
+                    braendstof = Console.ReadLine();
+                }
+                else
+                {             
+                    //udregn pris
+                    if (braendstof.ToLower() == "diesel")
+                    {
+                        braendstofspris = 12.29;
+                        pris = Beregning(kmPerLiter, braendstofspris, distance);
+                    }
+                    else if (braendstof.ToLower() == "benzin")
+                    {
+                        braendstofspris = 13.49;
+                        pris = Beregning(kmPerLiter, braendstofspris, distance);
+                    }
+                    else
+                    {
+                        Console.WriteLine("fejl");
+                    }
+                    break; 
+                }
+
+            }
+            Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {pris}");
         }
-            static double Beregning(double kmperliter, string braendstof)
-        {
-            if (braendstof.ToLower() == "diesel")
+
+
+            static double Beregning(double kmperliter, double braendstofpris, double distance)
             {
-                double braendstofpris = 12.29;
-                return (braendstofpris * 2);
+                double fuelNeeded = distance / kmperliter;
+                double Pris = fuelNeeded * braendstofpris;
+                return Pris;
+
             }
-            else if (braendstof.ToLower() == "benzin")
-            {
-                double braendstofpris = 13.49;
-                return (braendstofpris * 1);
-            }
-            return 1;
         }
     }
-}
+
