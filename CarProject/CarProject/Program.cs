@@ -110,5 +110,3 @@ namespace CarProject
         
         }
     }
-
-Console.WriteLine("hej verden");
