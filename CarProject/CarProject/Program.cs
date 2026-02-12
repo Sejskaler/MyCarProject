@@ -108,4 +108,4 @@ namespace CarProject
         }
     }
 
-Console.WriteLine("HEJ");
+
