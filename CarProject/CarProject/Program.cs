@@ -1,4 +1,6 @@
-﻿namespace CarProject
+﻿using System.Runtime.CompilerServices;
+
+namespace CarProject
 {
     internal class Program
     {
@@ -90,6 +92,9 @@
             }
             //skriv det hele ud
             Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {pris}");
+
+            //try with string  format, it takes {0} etc. as the variables IN ORDER
+            Console.WriteLine(String.Format("Brændstofstype: {0}, km/l: {1}, oprindelig km stand: {2} ny kilometerstand {3} det koster: {4}", braendstof, kmPerLiter, kilometerStand, (kilometerStand + distance), pris));
         }
 
         //lav beregningerne baseret på det der bliver parsed ind og return prisen
