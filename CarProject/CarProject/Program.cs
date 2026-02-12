@@ -53,7 +53,7 @@ namespace CarProject
 
 
             //gøres lidt anderledes med benz og diesel
-            Console.Write("benzin eller diesel?");
+            Console.WriteLine("benzin eller diesel?");
             string braendstof = Console.ReadLine();
 
             while (true)
@@ -62,7 +62,7 @@ namespace CarProject
                 if (braendstof.ToLower() != "benzin" && braendstof.ToLower() != "diesel")
                 {
                     //så skriv det lige igen
-                    Console.WriteLine("skriv lige benzin eller diesel");
+                    Console.Write("skriv lige benzin eller diesel: ");
                     braendstof = Console.ReadLine();
                 }
                 else
@@ -96,12 +96,12 @@ namespace CarProject
             //try with string  format, it takes {0} etc. as the variables IN ORDER
             Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, pris));
             // Table headers
-            Console.WriteLine("Brændstof".PadRight(10) + "Distance".PadLeft(0) + "Pris".PadLeft(10));
+            Console.WriteLine("Brændstof".PadRight(10) + "Distance".PadLeft(15) + "Pris".PadLeft(20));
 
             Console.WriteLine(new string('-', 35));
 
             // Table rows
-            Console.WriteLine( braendstof.PadRight(15) + distance.ToString().PadLeft(5) + pris.ToString().PadLeft(10));
+            Console.WriteLine( braendstof.PadRight(15) + distance.ToString().PadLeft(10) + pris.ToString().PadLeft(30));
 
         }
 
