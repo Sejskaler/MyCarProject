@@ -95,6 +95,7 @@ namespace CarProject
 
             //try with string  format, it takes {0} etc. as the variables IN ORDER
             Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, pris));
+
         }
 
         //lav beregningerne baseret på det der bliver parsed ind og return prisen
