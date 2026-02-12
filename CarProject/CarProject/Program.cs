@@ -95,6 +95,13 @@ namespace CarProject
 
             //try with string  format, it takes {0} etc. as the variables IN ORDER
             Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, pris));
+            // Table headers
+            Console.WriteLine("Brændstof".PadRight(10) + "Distance".PadLeft(0) + "Pris".PadLeft(10));
+
+            Console.WriteLine(new string('-', 35));
+
+            // Table rows
+            Console.WriteLine( braendstof.PadRight(15) + distance.ToString().PadLeft(5) + pris.ToString().PadLeft(10));
 
         }
 
@@ -107,19 +114,7 @@ namespace CarProject
 
             }
 
-        // Table headers
-        Console.WriteLine("Name".PadRight(15) + "Age".PadLeft(5) + "City".PadRight(15));
 
-        Console.WriteLine(new string ('-', 35));
-
-        // Table rows
-        Console.WriteLine( "Alice".PadRight(15) + "30".PadLeft(5) + "Copenhagen".PadRight(15));
-
-        Console.WriteLine("Bob".PadRight(15) + "25".PadLeft(5) + "Aarhus".PadRight(15));
-            
-        Console.WriteLine("Charlie".PadRight(15) + "40".PadLeft(5) + "Odense".PadRight(15));
     }
 }
         
-        }
-}
