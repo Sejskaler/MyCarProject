@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C2233A9-26F9-4EB4-91FD-17ABA0AF01E4}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C2233A9-26F9-4EB4-91FD-17ABA0AF01E4}|CarProject\\CarProject.csproj|solutionrelative:carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "CarProject\\Program.cs",
               "ToolTip": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Program.cs",
               "RelativeToolTip": "CarProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T08:54:01.89Z",
               "EditorCaption": ""
