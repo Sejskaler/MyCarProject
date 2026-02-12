@@ -6,6 +6,7 @@ namespace CarProject
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hej verden");
             double distance;
             double kmPerLiter;
             int kilometerStand;
@@ -110,3 +111,4 @@ namespace CarProject
         
         }
     }
+}
