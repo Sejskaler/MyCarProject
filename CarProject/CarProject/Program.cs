@@ -106,7 +106,9 @@ namespace CarProject
                 return Pris;
 
             }
+
+        
         }
     }
 
-
+Console.WriteLine("hej verden");
