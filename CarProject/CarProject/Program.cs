@@ -109,7 +109,7 @@ namespace CarProject
                     }*/
 
                 }
-                pris = Beregning(kmPerLiter, braendstofspris, distance);
+                pris = BeregnPrisAfBraendstof(kmPerLiter, braendstofspris, distance);
                 break;
 
 
@@ -130,7 +130,7 @@ namespace CarProject
         }
 
         //lav beregningerne baseret på det der bliver parsed ind og return prisen
-            static double Beregning(double kmperliter, double braendstofpris, double distance)
+            static double BeregnPrisAfBraendstof(double kmperliter, double braendstofpris, double distance)
             {
                 double fuelNeeded = distance / kmperliter;
                 double Pris = fuelNeeded * braendstofpris;
