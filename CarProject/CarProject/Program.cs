@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
 
 namespace CarProject
 {
@@ -8,8 +9,15 @@ namespace CarProject
         {
             double braendstofspris = 0;
             double pris = 0;
+            //string bruger det samme som vores tuple
+            Dictionary<string, (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand)> biler = new Dictionary<string, (string, string, string, int, char, string, double, double, int)>(StringComparer.OrdinalIgnoreCase);
+            
+
+            //initialiser første bil
             var bil = ReadCarDetails();
 
+            // Add bilen til vores liste med bildetaljer
+            biler[bil.navn] = bil;
             bool LukProgram = false;
 
             Console.WriteLine("Velkommen til BIlprogrammet");
@@ -21,7 +29,7 @@ namespace CarProject
                 Console.WriteLine("(D)rive");
                 Console.WriteLine("(C)alculate Trip Price");
                 Console.WriteLine("(P)alindrom");
-                Console.WriteLine("(F)å bildetaljer");
+                Console.WriteLine("(F)å bildetaljer om senest tilføjede");
                 Console.WriteLine("(H)ele holdets bildetaljer"); //lav for loob der kører ReadCarDetails og derfra udskriver. Evt dict over navn + bil tuple
                 var userChoice = Console.ReadLine();
 
@@ -32,8 +40,12 @@ namespace CarProject
                         Console.WriteLine("afslutter");
                         break;
                     case "s":
-                        Console.WriteLine("Tilføj detaljer");
                         bil = ReadCarDetails();
+
+                        // Add or overwrite (simplest)
+                        biler[bil.navn] = bil;
+
+                        Console.WriteLine($"Gemt bil for {bil.navn}.");
                         break;
                     case "c":
                         Console.WriteLine("Calc trip price");
@@ -56,7 +68,7 @@ namespace CarProject
                         break;
                     case "h":
                         Console.WriteLine("Få hele holdets bildetaljer");
-                        PrintAllTeamCars();
+                        PrintAllTeamCars(biler);
                         break;
                     default:
                         Console.WriteLine("Vælg venligst en");
@@ -67,31 +79,12 @@ namespace CarProject
 
 
 
-
-                /*
-
-                //pris = BeregnPrisAfBraendstof(bil.braendstof, bil.kmPerLiter, braendstofspris, bil.distance);
-
-
-                Console.WriteLine($"Brændstofstype: {bil.braendstof}, km/l: {bil.kmPerLiter}, oprindelig km stand: {bil.kilometerStand} ny kilometerstand {bil.kilometerStand + bil.distance} det koster: {Math.Round(pris)}");
-
-                //try with string  format, it takes {0} etc. as the variables IN ORDER
-                Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", bil.distance, Math.Round(pris)));
-                //Overskrift
-                Console.WriteLine("Brændstof".PadRight(15) + "Distance".PadRight(15) + "Pris".PadRight(15));
-                //add linjer
-                Console.WriteLine(new string('-', 35));
-
-                //rækker
-                Console.WriteLine(bil.braendstof.PadRight(15) + bil.distance.ToString().PadRight(15) + Math.Round(pris).ToString().PadRight(15));*/
-
             }
 
-            //lav beregningerne baseret på det der bliver parsed ind og return prisen
             
 
 
-            static (string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand) ReadCarDetails()
+            static (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand) ReadCarDetails()
             {
                 string brand = "Toyota";
                 string model = "Corolla";
@@ -102,8 +95,15 @@ namespace CarProject
                 double distance = 0;
                 int kilometerStand = 0;
 
+                //add navn osv.
+                Console.Write("Navn: ");
+                string navn = (Console.ReadLine() ?? "").Trim();
 
-                Console.WriteLine("Brand: " + Console.ReadLine());
+                if (navn == "")
+                {
+                    Console.WriteLine("Navn må ikke være tomt.");
+                }
+                Console.WriteLine("Brand: ");
                 brand = Console.ReadLine();
 
                 Console.WriteLine("Model: ");
@@ -167,7 +167,7 @@ namespace CarProject
                     }
 
 
-                    return (brand, model, yearINT, gear, braendstof, kmPerLiter, distance, kilometerStand);
+                    return (navn, brand, model, yearINT, gear, braendstof, kmPerLiter, distance, kilometerStand);
 
 
 
@@ -201,6 +201,7 @@ namespace CarProject
         }
         static double CalculateTripPrice(string braendstof, double kmperliter, double braendstofspris)
         {
+            Console.WriteLine("Vi kan ikke beregne tur uden distance");
             double distance;
             while (kmperliter == 0)
             {
@@ -259,9 +260,13 @@ namespace CarProject
         {
         Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {Math.Round(CalculateTripPrice(braendstof, kmPerLiter, 0))}");
         }
-        static void PrintAllTeamCars()
+        static void PrintAllTeamCars(Dictionary<string, (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand)> biler)
         {
-
+            foreach (var bil in biler)
+            {
+                Console.WriteLine($"\n=== {bil.Key} ===");
+                Console.WriteLine(bil.Value);
+            }
         }
     }
 }
