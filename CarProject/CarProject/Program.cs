@@ -153,6 +153,22 @@ namespace CarProject
             {
 
             }
+            static void CalculateTripPrice()
+            {
+
+            }
+            static void IsPalindrome()
+            {
+
+            }
+            static void PrintCarDetails()
+            {
+
+            }
+            static void PrintAllTeamCars()
+            {
+
+            }
         }
     }
 }
