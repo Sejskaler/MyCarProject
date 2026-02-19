@@ -13,7 +13,6 @@ namespace CarProject
             double pris = 0;
 
 
-
             //kmperliter - loopet er brugt 3 gange
             while (true)
             {
@@ -85,28 +84,6 @@ namespace CarProject
                             Console.WriteLine("fejl");
                             return;
                     }
-                    // Herunder er den originale if version, den kan ikke rigtig uddybes, derfor added switch. Den skal selvfølgelig være i else
-                    /*{             
-                       //udregn pris
-                        if (braendstof.ToLower() == "diesel")
-                        {
-                            braendstofspris = 12.29;
-                            //benyt funktionen Beregning
-                            pris = Beregning(kmPerLiter, braendstofspris, distance);
-                        }
-                        else if (braendstof.ToLower() == "benzin")
-                        {
-                            braendstofspris = 13.49;
-                            pris = Beregning(kmPerLiter, braendstofspris, distance);
-                        }
-                        else
-                        {
-                            //det her sker aldrig, men hvis det gør, så skriv en fejl. Det vil den gøre for evigt, det her bør egentligt få et break og returne nothing for ikke at få et inf. loop
-                            Console.WriteLine("fejl");
-                        }
-                        //hvis det har lykkedes os at udregne, så break
-                        break; 
-                    }*/
 
                 }
                 pris = BeregnPrisAfBraendstof(kmPerLiter, braendstofspris, distance);
