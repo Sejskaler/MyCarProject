@@ -52,7 +52,7 @@ namespace CarProject
                         break;
                     case "f":
                         Console.WriteLine("få bildetaljer");
-                        PrintCarDetails();
+                        PrintCarDetails(bil.braendstof, bil.kmPerLiter, bil.kilometerStand, bil.distance);
                         break;
                     case "h":
                         Console.WriteLine("Få hele holdets bildetaljer");
@@ -255,9 +255,9 @@ namespace CarProject
                 return false;
             }
         }
-        static void PrintCarDetails()
+        static void PrintCarDetails(string braendstof, double kmPerLiter, double kilometerStand, double distance)
         {
-
+        Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {Math.Round(CalculateTripPrice(braendstof, kmPerLiter, 0))}");
         }
         static void PrintAllTeamCars()
         {

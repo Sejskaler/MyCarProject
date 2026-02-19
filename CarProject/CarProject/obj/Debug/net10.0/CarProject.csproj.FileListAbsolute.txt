@@ -28,3 +28,18 @@ C:\Users\broly\source\repos\MyCarProject\CarProject\CarProject\obj\Debug\net10.0
 C:\Users\broly\source\repos\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.pdb
 C:\Users\broly\source\repos\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.genruntimeconfig.cache
 C:\Users\broly\source\repos\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\ref\CarProject.dll
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\bin\Debug\net10.0\CarProject.exe
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\bin\Debug\net10.0\CarProject.deps.json
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\bin\Debug\net10.0\CarProject.runtimeconfig.json
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\bin\Debug\net10.0\CarProject.dll
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\bin\Debug\net10.0\CarProject.pdb
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.AssemblyInfoInputs.cache
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.AssemblyInfo.cs
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.csproj.CoreCompileInputs.cache
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.sourcelink.json
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.dll
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\refint\CarProject.dll
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.pdb
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\CarProject.genruntimeconfig.cache
+C:\Users\Christina\Desktop\Visual studio projekter\MyCarProject\MyCarProject\CarProject\CarProject\obj\Debug\net10.0\ref\CarProject.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj": {}
+    "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj": {
+    "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj",
+        "projectUniqueName": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj",
         "projectName": "CarProject",
-        "projectPath": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj",
-        "packagesPath": "C:\\Users\\broly\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\obj\\",
+        "projectPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj",
+        "packagesPath": "C:\\Users\\Christina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\broly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Christina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
