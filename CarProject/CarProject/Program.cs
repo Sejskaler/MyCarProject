@@ -17,19 +17,19 @@ namespace CarProject
 
             pris = BeregnPrisAfBraendstof(bil.braendstof, bil.kmPerLiter, braendstofspris, bil.distance);
 
-            /*//skriv det hele ud
-            Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {Math.Round(pris)}");
+
+            Console.WriteLine($"Brændstofstype: {bil.braendstof}, km/l: {bil.kmPerLiter}, oprindelig km stand: {bil.kilometerStand} ny kilometerstand {bil.kilometerStand + bil.distance} det koster: {Math.Round(pris)}");
 
             //try with string  format, it takes {0} etc. as the variables IN ORDER
-            Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", distance, Math.Round(pris)));
+            Console.WriteLine(String.Format("Brændstofudgifterne for {0} km er {1} DKK.", bil.distance, Math.Round(pris)));
             //Overskrift
             Console.WriteLine("Brændstof".PadRight(15) + "Distance".PadRight(15) + "Pris".PadRight(15));
             //add linjer
             Console.WriteLine(new string('-', 35));
 
             //rækker
-            Console.WriteLine(braendstof.PadRight(15) + distance.ToString().PadRight(15) + Math.Round(pris).ToString().PadRight(15));
-            */
+            Console.WriteLine(bil.braendstof.PadRight(15) + bil.distance.ToString().PadRight(15) + Math.Round(pris).ToString().PadRight(15));
+
         }
 
         //lav beregningerne baseret på det der bliver parsed ind og return prisen
@@ -57,7 +57,7 @@ namespace CarProject
         }
 
 
-        static (string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance) ReadCarDetails()
+        static (string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand) ReadCarDetails()
         {
             string brand = "Toyota";
             string model = "Corolla";
@@ -133,25 +133,23 @@ namespace CarProject
                 //hvis det ikke er benzin og det ikke er diesel
                 if (braendstof.ToLower() != "benzin" && braendstof.ToLower() != "diesel" && braendstof.ToLower() != "el")
                 {
-                    //så skriv det lige igen
                     Console.Write("skriv lige benzin, diesel eller el: ");
                     braendstof = Console.ReadLine();
 
                 }
                 else
                 {
-                    Console.WriteLine("Prøv lige at skrive benzin, diesel eller el");
                 }
 
 
-                return (brand, model, yearINT, gear, braendstof, kmPerLiter, distance);
+                return (brand, model, yearINT, gear, braendstof, kmPerLiter, distance, kilometerStand);
 
 
 
                 //($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
             }
 
-            static void ReadCarDetails()
+            static void Drive()
             {
 
             }
