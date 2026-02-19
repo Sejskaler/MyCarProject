@@ -12,6 +12,8 @@ namespace CarProject
             double braendstofspris = 0;
             double pris = 0;
 
+
+
             //kmperliter - loopet er brugt 3 gange
             while (true)
             {
@@ -136,7 +138,36 @@ namespace CarProject
 
             }
 
+            static string Bilparametre()
+        { 
+            string brand = "Toyota";
+            string model = "Corolla";
+            string year = "2020";
+            int yearINT = 0;
+            char gear = 'a';
 
+            Console.WriteLine("Brand: "+ Console.ReadLine());
+                brand = Console.ReadLine();
+
+                Console.WriteLine("Model: ");
+                model = Console.ReadLine();
+
+                Console.WriteLine("Aar: ");
+                year = Console.ReadLine();
+                yearINT = int.Parse(year);
+
+            Console.WriteLine("gear: ");
+                gear = char.Parse(Console.ReadLine());
+
+            return (brand, model, yearINT, gear)
+
+             ($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
+        }
+
+        static void ReadCarDetails()
+        {
+
+        }
     }
 }
         
