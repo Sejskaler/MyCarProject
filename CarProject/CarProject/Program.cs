@@ -148,16 +148,7 @@ namespace CarProject
                 }
 
                 //distance -- samme som tidligere
-                while (true)
-                {
-                    Console.Write("distance: ");
-                    string distanceInput = Console.ReadLine();
-
-                    if (double.TryParse(distanceInput, out distance))
-                        break;
-
-                    Console.WriteLine("Det er ikke et nummer");
-                }
+               
 
                 //kilometerstand -- samme som tidligere, men med int
                 while (true)
@@ -200,9 +191,26 @@ namespace CarProject
 
             }
         }
-        static void Drive()
+        static int Drive(int kilometerStand, bool engineison)
         {
+            double distance;
+            while (true)
+            {
+                Console.Write("distance: ");
+                string distanceInput = Console.ReadLine();
 
+                if (double.TryParse(distanceInput, out distance))
+                    break;
+
+                Console.WriteLine("Det er ikke et nummer");
+            }
+            if (engineison)
+            {
+                kilometerStand += Convert.ToInt32(distance);
+
+                return kilometerStand;
+             }
+            
         }
         static void CalculateTripPrice()
         {
