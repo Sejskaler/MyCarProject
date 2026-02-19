@@ -9,13 +9,13 @@ namespace CarProject
             double braendstofspris = 0;
             double pris = 0;
 
-                //hvis det er, så beregn prisen
+            //hvis det er, så beregn prisen
 
 
-                var bil = ReadCarDetails();
+            var bil = ReadCarDetails();
 
 
-                pris = BeregnPrisAfBraendstof(bil.braendstof, bil.kmPerLiter, braendstofspris, bil.distance);
+            pris = BeregnPrisAfBraendstof(bil.braendstof, bil.kmPerLiter, braendstofspris, bil.distance);
 
             /*//skriv det hele ud
             Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {Math.Round(pris)}");
@@ -33,8 +33,8 @@ namespace CarProject
         }
 
         //lav beregningerne baseret på det der bliver parsed ind og return prisen
-            static double BeregnPrisAfBraendstof(string braendstof, double kmperliter, double braendstofspris, double distance)
-            {
+        static double BeregnPrisAfBraendstof(string braendstof, double kmperliter, double braendstofspris, double distance)
+        {
             switch (braendstof.ToLower())
             {
                 case "benzin":
@@ -48,17 +48,17 @@ namespace CarProject
                     break;
                 default:
                     Console.WriteLine("fejl");
-                    return;
+                    return 0;
             }
             double fuelNeeded = distance / kmperliter;
-                double Pris = fuelNeeded * braendstofspris;
-                return Pris;
+            double Pris = fuelNeeded * braendstofspris;
+            return Pris;
 
-            }
+        }
 
 
-            static (string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance) ReadCarDetails()
-        { 
+        static (string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance) ReadCarDetails()
+        {
             string brand = "Toyota";
             string model = "Corolla";
             string year = "2020";
@@ -66,20 +66,22 @@ namespace CarProject
             char gear = 'a';
             double kmPerLiter = 0;
             double distance = 0;
+            int kilometerStand = 0;
 
 
-            Console.WriteLine("Brand: "+ Console.ReadLine());
-                brand = Console.ReadLine();
+            Console.WriteLine("Brand: " + Console.ReadLine());
+            brand = Console.ReadLine();
 
-                Console.WriteLine("Model: ");
-                model = Console.ReadLine();
+            Console.WriteLine("Model: ");
+            model = Console.ReadLine();
 
-                Console.WriteLine("Aar: ");
-                year = Console.ReadLine();
-                yearINT = int.Parse(year);
+            Console.WriteLine("Aar: ");
+            year = Console.ReadLine();
+            yearINT = int.Parse(year);
 
             Console.WriteLine("gear: ");
-                gear = char.Parse(Console.ReadLine());
+            gear = char.Parse(Console.ReadLine());
+
             //kmperliter - loopet er brugt 3 gange
             while (true)
             {
@@ -96,6 +98,7 @@ namespace CarProject
                 //hvis det ikke er en double, fortæl bruger
                 Console.WriteLine("Det er ikke et nummer");
             }
+
             //distance -- samme som tidligere
             while (true)
             {
@@ -107,6 +110,7 @@ namespace CarProject
 
                 Console.WriteLine("Det er ikke et nummer");
             }
+
             //kilometerstand -- samme som tidligere, men med int
             while (true)
             {
@@ -136,20 +140,21 @@ namespace CarProject
                 }
                 else
                 {
-                    break;
+                    Console.WriteLine("Prøv lige at skrive benzin, diesel eller el");
                 }
-                
+
 
                 return (brand, model, yearINT, gear, braendstof, kmPerLiter, distance);
 
 
 
-           //($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
-        }
+                //($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
+            }
 
-        static void ReadCarDetails()
-        {
+            static void ReadCarDetails()
+            {
 
+            }
         }
     }
 }
