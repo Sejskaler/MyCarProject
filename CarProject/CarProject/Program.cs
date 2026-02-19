@@ -43,7 +43,8 @@ namespace CarProject
                         break;
                     case "p":
                         Console.WriteLine("er det et palindrom?");
-                        IsPalindrome();
+                        bool palindromeTest = IsPalindrome(bil.kilometerStand);
+                        Console.WriteLine(palindromeTest);
                         break;
                     case "f":
                         Console.WriteLine("få bildetaljer");
@@ -219,9 +220,20 @@ namespace CarProject
         {
 
         }
-        static void IsPalindrome()
+        static bool IsPalindrome(int km)
         {
-
+            string kmString = km.ToString();
+            char[] kmPalindrom = kmString.ToCharArray();
+            Array.Reverse(kmPalindrom);
+            string kmStringReversed = new string(kmPalindrom);
+            if (kmString == kmStringReversed)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         static void PrintCarDetails()
         {
