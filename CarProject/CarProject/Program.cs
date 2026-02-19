@@ -138,7 +138,7 @@ namespace CarProject
 
             }
 
-            static string Bilparametre()
+            static (string brand, string model, int year, char gear) Bilparametre()
         { 
             string brand = "Toyota";
             string model = "Corolla";
@@ -159,9 +159,9 @@ namespace CarProject
             Console.WriteLine("gear: ");
                 gear = char.Parse(Console.ReadLine());
 
-            return (brand, model, yearINT, gear)
+            return (brand, model, yearINT, gear);
 
-             ($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
+           //($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
         }
 
         static void ReadCarDetails()
