@@ -12,7 +12,7 @@ namespace CarProject
 
             bool LukProgram = false;
 
-            Console.WriteLine("Velkommen til tidsplanlæggeren");
+            Console.WriteLine("Velkommen til BIlprogrammet");
 
             while (!LukProgram)
             {
@@ -34,6 +34,10 @@ namespace CarProject
                     case "s":
                         Console.WriteLine("Tilføj detaljer");
                         bil = ReadCarDetails();
+                        break;
+                    case "c":
+                        Console.WriteLine("Calc trip price");
+                        CalculateTripPrice(bil.braendstof, bil.kmPerLiter, braendstofspris);
                         break;
                     case "d":
                         Console.WriteLine("Kør");
@@ -84,28 +88,7 @@ namespace CarProject
             }
 
             //lav beregningerne baseret på det der bliver parsed ind og return prisen
-            static double BeregnPrisAfBraendstof(string braendstof, double kmperliter, double braendstofspris, double distance)
-            {
-                switch (braendstof.ToLower())
-                {
-                    case "benzin":
-                        braendstofspris = 13.49;
-                        break;
-                    case "diesel":
-                        braendstofspris = 12.29;
-                        break;
-                    case "el":
-                        braendstofspris = 1.12;
-                        break;
-                    default:
-                        Console.WriteLine("fejl");
-                        return 0;
-                }
-                double fuelNeeded = distance / kmperliter;
-                double Pris = fuelNeeded * braendstofspris;
-                return Pris;
-
-            }
+            
 
 
             static (string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand) ReadCarDetails()
@@ -216,8 +199,45 @@ namespace CarProject
             else { return kilometerStand; }
             
         }
-        static void CalculateTripPrice()
+        static double CalculateTripPrice(string braendstof, double kmperliter, double braendstofspris)
         {
+            double distance;
+            while (kmperliter == 0)
+            {
+                Console.WriteLine("indtast over 0. \n Km per liter?");
+                string kmperliterInput = Console.ReadLine();
+                if (double.TryParse(kmperliterInput, out kmperliter))
+                    break;
+            }
+        
+            while (true)
+            {
+                Console.Write("distance: ");
+                string distanceInput = Console.ReadLine();
+
+                if (double.TryParse(distanceInput, out distance))
+                    break;
+
+                Console.WriteLine("Det er ikke et nummer");
+            }
+            switch (braendstof.ToLower())
+            {
+                case "benzin":
+                    braendstofspris = 13.49;
+                    break;
+                case "diesel":
+                    braendstofspris = 12.29;
+                    break;
+                case "el":
+                    braendstofspris = 1.12;
+                    break;
+                default:
+                    Console.WriteLine("fejl");
+                    return 0;
+            }
+            double fuelNeeded = distance / kmperliter;
+            double Pris = fuelNeeded * braendstofspris;
+            return Pris;
 
         }
         static bool IsPalindrome(int km)
