@@ -8,7 +8,7 @@ namespace CarProject
         {
             double braendstofspris = 0;
             double pris = 0;
-            var bil = default((string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand));
+            var bil = ReadCarDetails();
 
             bool LukProgram = false;
 
@@ -31,13 +31,15 @@ namespace CarProject
                         LukProgram = true;
                         Console.WriteLine("afslutter");
                         break;
-                    case "d":
+                    case "s":
                         Console.WriteLine("Tilføj detaljer");
                         bil = ReadCarDetails();
                         break;
-                    case "c":
+                    case "d":
                         Console.WriteLine("Kør");
-                        Drive();
+                        Console.WriteLine(bil.kilometerStand);
+                        bil.kilometerStand = Drive(bil.kilometerStand, true);
+                        Console.WriteLine(bil.kilometerStand);
                         break;
                     case "p":
                         Console.WriteLine("er det et palindrom?");
@@ -61,9 +63,9 @@ namespace CarProject
 
 
 
+                /*
 
-
-                pris = BeregnPrisAfBraendstof(bil.braendstof, bil.kmPerLiter, braendstofspris, bil.distance);
+                //pris = BeregnPrisAfBraendstof(bil.braendstof, bil.kmPerLiter, braendstofspris, bil.distance);
 
 
                 Console.WriteLine($"Brændstofstype: {bil.braendstof}, km/l: {bil.kmPerLiter}, oprindelig km stand: {bil.kilometerStand} ny kilometerstand {bil.kilometerStand + bil.distance} det koster: {Math.Round(pris)}");
@@ -76,7 +78,7 @@ namespace CarProject
                 Console.WriteLine(new string('-', 35));
 
                 //rækker
-                Console.WriteLine(bil.braendstof.PadRight(15) + bil.distance.ToString().PadRight(15) + Math.Round(pris).ToString().PadRight(15));
+                Console.WriteLine(bil.braendstof.PadRight(15) + bil.distance.ToString().PadRight(15) + Math.Round(pris).ToString().PadRight(15));*/
 
             }
 
@@ -210,6 +212,7 @@ namespace CarProject
 
                 return kilometerStand;
              }
+            else { return kilometerStand; }
             
         }
         static void CalculateTripPrice()
