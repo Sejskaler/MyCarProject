@@ -1,4 +1,6 @@
-﻿using System.Runtime.CompilerServices;
+﻿using Microsoft.VisualBasic.FileIO;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 
 namespace CarProject
@@ -7,20 +9,25 @@ namespace CarProject
     {
         static void Main(string[] args)
         {
-            double braendstofspris = 0;
-            double pris = 0;
+            double fuelPrice = 0.0;
+            double Price = 0.0;
+            double distance = 0.0;
+
+            Car bil1 = new Car("", "", 0, '\0', 0.0, "", 0.0, false);
+            string carOwnerName = bil1.ReadCarDetails();
+
             //string bruger det samme som vores tuple
-            Dictionary<string, (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand)> biler = new Dictionary<string, (string, string, string, int, char, string, double, double, int)>(StringComparer.OrdinalIgnoreCase);
+            //Dictionary<string, (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand)> biler = new Dictionary<string, (string, string, string, int, char, string, double, double, int)>(StringComparer.OrdinalIgnoreCase);
             
 
             //initialiser første bil
-            var bil = ReadCarDetails();
+            //var bil = ReadCarDetails();
 
             // Add bilen til vores liste med bildetaljer
-            biler[bil.navn] = bil;
+            //biler[bil.navn] = bil;
             bool LukProgram = false;
 
-            Console.WriteLine("Velkommen til BIlprogrammet");
+            Console.WriteLine("Velkommen til Bilprogrammet");
 
             while (!LukProgram)
             {
@@ -81,172 +88,14 @@ namespace CarProject
 
             }
 
-            
-
-
-            static (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand) ReadCarDetails()
-            {
-                string brand = "Toyota";
-                string model = "Corolla";
-                string year = "2020";
-                int yearINT = 0;
-                char gear = 'a';
-                double kmPerLiter = 0;
-                double distance = 0;
-                int kilometerStand = 0;
-
-                //add navn osv.
-                Console.Write("Navn: ");
-                string navn = (Console.ReadLine() ?? "").Trim();
-
-                if (navn == "")
-                {
-                    Console.WriteLine("Navn må ikke være tomt.");
-                }
-                Console.WriteLine("Brand: ");
-                brand = Console.ReadLine();
-
-                Console.WriteLine("Model: ");
-                model = Console.ReadLine();
-
-                Console.WriteLine("Aar: ");
-                year = Console.ReadLine();
-                yearINT = int.Parse(year);
-
-                Console.WriteLine("gear: ");
-                gear = char.Parse(Console.ReadLine());
-
-                //kmperliter - loopet er brugt 3 gange
-                while (true)
-                {
-                    //få input fra bruger
-                    Console.Write("Km per liter: ");
-                    string kmPerLiterInput = Console.ReadLine();
-
-                    //tjek om input er double og output det til kmPerLiter hvis det er
-                    if (double.TryParse(kmPerLiterInput, out kmPerLiter))
-                    {
-                        //Stop loopet hvis det er
-                        break;
-                    }
-                    //hvis det ikke er en double, fortæl bruger
-                    Console.WriteLine("Det er ikke et nummer");
-                }
-
-                //distance -- samme som tidligere
-               
-
-                //kilometerstand -- samme som tidligere, men med int
-                while (true)
-                {
-                    Console.Write("Kilometerstand: ");
-                    string kilometerstandInput = Console.ReadLine();
-
-                    if (int.TryParse(kilometerstandInput, out kilometerStand))
-                        break;
-
-                    Console.WriteLine("Det er ikke et nummer");
-                }
-
-
-                //gøres lidt anderledes med benz og diesel
-                Console.WriteLine("benzin, diesel eller el?");
-                string braendstof = Console.ReadLine();
-
-                while (true)
-                {
-                    //hvis det ikke er benzin og det ikke er diesel
-                    if (braendstof.ToLower() != "benzin" && braendstof.ToLower() != "diesel" && braendstof.ToLower() != "el")
-                    {
-                        Console.Write("skriv lige benzin, diesel eller el: ");
-                        braendstof = Console.ReadLine();
-
-                    }
-                    else
-                    {
-                    }
-
-
-                    return (navn, brand, model, yearINT, gear, braendstof, kmPerLiter, distance, kilometerStand);
-
-
-
-                    //($"Dit Bilmaerke er {brand} og det er modellen {model}. Den kommer fra år {year} og den kører med {gear} gear");
-                }
-
-
-            }
-        }
-        static int Drive(int kilometerStand, bool engineison)
-        {
-            double distance;
-            while (true)
-            {
-                Console.Write("distance: ");
-                string distanceInput = Console.ReadLine();
-
-                if (double.TryParse(distanceInput, out distance))
-                    break;
-
-                Console.WriteLine("Det er ikke et nummer");
-            }
-            if (engineison)
-            {
-                kilometerStand += Convert.ToInt32(distance);
-
-                return kilometerStand;
-             }
-            else { return kilometerStand; }
-            
-        }
-        static double CalculateTripPrice(string braendstof, double kmperliter, double braendstofspris)
-        {
-            Console.WriteLine("Vi kan ikke beregne tur uden distance");
-            double distance;
-            while (kmperliter == 0)
-            {
-                Console.WriteLine("indtast over 0. \n Km per liter?");
-                string kmperliterInput = Console.ReadLine();
-                if (double.TryParse(kmperliterInput, out kmperliter))
-                    break;
-            }
-        
-            while (true)
-            {
-                Console.Write("distance: ");
-                string distanceInput = Console.ReadLine();
-
-                if (double.TryParse(distanceInput, out distance))
-                    break;
-
-                Console.WriteLine("Det er ikke et nummer");
-            }
-            switch (braendstof.ToLower())
-            {
-                case "benzin":
-                    braendstofspris = 13.49;
-                    break;
-                case "diesel":
-                    braendstofspris = 12.29;
-                    break;
-                case "el":
-                    braendstofspris = 1.12;
-                    break;
-                default:
-                    Console.WriteLine("fejl");
-                    return 0;
-            }
-            double fuelNeeded = distance / kmperliter;
-            double Pris = fuelNeeded * braendstofspris;
-            return Pris;
 
         }
         static bool IsPalindrome(int km)
         {
             string kmString = km.ToString();
-            char[] kmPalindrom = kmString.ToCharArray();
-            Array.Reverse(kmPalindrom);
-            string kmStringReversed = new string(kmPalindrom);
+            char[] kmPalindrome = kmString.ToCharArray();
+            Array.Reverse(kmPalindrome);
+            string kmStringReversed = new string(kmPalindrome);
             if (kmString == kmStringReversed)
             {
                 return true;
@@ -256,10 +105,13 @@ namespace CarProject
                 return false;
             }
         }
-        static void PrintCarDetails(string braendstof, double kmPerLiter, double kilometerStand, double distance)
+
+        static void PrintCarDetails(string fuelType, double kmPrLiter, double odometer, double distance)
         {
-        Console.WriteLine($"Brændstofstype: {braendstof}, km/l: {kmPerLiter}, oprindelig km stand: {kilometerStand} ny kilometerstand {kilometerStand + distance} det koster: {Math.Round(CalculateTripPrice(braendstof, kmPerLiter, 0))}");
+        Console.WriteLine($"Brændstofstype: {fuelType}, km/l: {kmPrLiter}, oprindelig km stand: {odometer} ny kilometerstand {odometer + distance} det koster: {Math.Round(CalculateTripPrice(braendstof, kmPerLiter, 0))}");
         }
+
+
         static void PrintAllTeamCars(Dictionary<string, (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand)> biler)
         {
             foreach (var bil in biler)
