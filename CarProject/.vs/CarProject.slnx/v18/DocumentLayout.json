@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\",
+  "WorkspaceRootPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\users\\christina\\desktop\\visual studio projekter\\mycarproject\\mycarproject\\carproject\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\users\\christina\\desktop\\visual studio projekter\\mycarproject\\mycarproject\\carproject\\carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,15 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Program.cs",
-              "RelativeDocumentMoniker": "CarProject\\Program.cs",
-              "ToolTip": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Program.cs",
-              "RelativeToolTip": "CarProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwBAAANAAAAAAAAAA==",
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\Car.cs",
+              "RelativeDocumentMoniker": "Car.cs",
+              "ToolTip": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\Car.cs",
+              "RelativeToolTip": "Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T12:34:18.558Z",
+              "WhenOpened": "2026-03-04T07:50:15.346Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\Program.cs",
+              "RelativeDocumentMoniker": "CarProject\\Program.cs",
+              "ToolTip": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\Program.cs",
+              "RelativeToolTip": "CarProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T08:54:01.89Z"
             }
           ]
         }

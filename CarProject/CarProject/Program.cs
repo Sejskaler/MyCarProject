@@ -9,9 +9,9 @@ namespace CarProject
     {
         static void Main(string[] args)
         {
-            double fuelPrice = 0.0;
+            double FuelPrice = 0.0;
             double Price = 0.0;
-            double distance = 0.0;
+            double Distance = 0.0;
 
             Car bil1 = new Car("", "", 0, '\0', 0.0, "", 0.0, false);
             string carOwnerName = bil1.ReadCarDetails();
@@ -60,18 +60,18 @@ namespace CarProject
                         break;
                     case "d":
                         Console.WriteLine("Kør");
-                        Console.WriteLine(bil.kilometerStand);
-                        bil.kilometerStand = Drive(bil.kilometerStand, true);
-                        Console.WriteLine(bil.kilometerStand);
+                        Console.WriteLine(Odometer);
+                        bil.kilometerStand = Drive(Odometer, true);
+                        Console.WriteLine(Odometer);
                         break;
                     case "p":
                         Console.WriteLine("er det et palindrom?");
-                        bool palindromeTest = IsPalindrome(bil.kilometerStand);
+                        bool palindromeTest = IsPalindrome(Odometer);
                         Console.WriteLine(palindromeTest);
                         break;
                     case "f":
                         Console.WriteLine("få bildetaljer");
-                        PrintCarDetails(bil.braendstof, bil.kmPerLiter, bil.kilometerStand, bil.distance);
+                        PrintCarDetails(FuelType, KmPerLiter, Odometer, distance);
                         break;
                     case "h":
                         Console.WriteLine("Få hele holdets bildetaljer");

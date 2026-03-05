@@ -2,16 +2,16 @@
 
 class Car
 {
-    private Class1()
+    private class Car()
     {
-        string _brand;
-        string _model;
-        int _year;
-        char _gear;
-        double _odometer;
-        string _fuelType;
-        double _kmPrLiter;
-        bool _engineActive;
+        private string _brand;
+        private string _model;
+        private int _year;
+        private char _gear;
+        private double _odometer;
+        private string _fuelType;
+        private double _kmPrLiter;
+        private bool _engineActive;
 
         // Constructor
         public Car(string brand, string model, int year, char gear, double odometer, string fuelType, double kmPrLiter, bool engineActive)
@@ -21,60 +21,60 @@ class Car
             _year = year;
             _gear = gear;
             _odometer = odometer;
-            _fueltype = fuelType;
+            _fuelType = fuelType;
             _kmPrLiter = kmPrLiter;
             _engineActive = engineActive;
         }
 
         // Read-only property - brand
-        public string brand
+        public string Brand
         {
             get { return _brand; }
         }
 
         // Read-only property - model
-        public string model
+        public string Model
         {
             get { return _model; }
         }
 
         // Read-only property - year
-        public int year
+        public int Year
         {
             get { return _year; }
         }
 
         // Read-only property - gear
-        public char gear
+        public char Gear
         {
             get { return _gear; }
         }
 
         // Read-only property - odometer
-        public double odometer
+        public double Odometer
         {
             get { return _odometer; }
         }
 
         // Read-only property - fuelType
-        public string fuelType
+        public string FuelType
         {
             get { return _fuelType; }
         }
 
         // Read-only property - kmPrLiter
-        public double kmPrLiter
+        public double KmPrLiter
         {
             get { return _kmPrLiter; }
         }
 
         // Property with validation - engineActive
-        public bool engineActive
+        public bool EngineActive
         {
             get { return _engineActive; }
             set
             {
-                if (engineActive == false)
+                if (EngineActive == false)
                     _engineActive = true;
 
                 else
@@ -83,26 +83,27 @@ class Car
         }
 
         // Method - Drive
-        public double Drive(double odometer, bool engineActive)
+        public double Drive(double Odometer, bool EngineActive, double Distance)
         {
             while (true)
             {
                 Console.Write("Distance: ");
-                string distanceInput = Console.ReadLine();
+                string DistanceInput = Console.ReadLine();
 
-                if (double.TryParse(distanceInput, out distance))
+                if (double.TryParse(DistanceInput, out Distance))
                     break;
 
                 Console.WriteLine("Det er ikke et tal");
             }
 
-            if (engineActive)
+            if (EngineActive)
                 _odometer += distance;
+          
         }
 
 
         // Method - CalculateTripPrice
-        public double CalculateTripPrice(string fuelType, double kmPrLiter, double fuelPrice, double distance)
+        public double CalculateTripPrice(string FuelType, double KmPrLiter, double FuelPrice, double distance)
         {
             Console.WriteLine("Vi kan ikke beregne en køretur uden distance");
 //            while (_kmPrLiter == 0)
@@ -124,24 +125,24 @@ class Car
                 Console.WriteLine("Det er ikke et nummer");
             }
 
-            switch (fuelType.ToLower())
+            switch (FuelType.ToLower())
             {
                 case "benzin":
-                    fuelPrice = 13.49;
+                    FuelPrice = 13.49;
                     break;
                 case "diesel":
-                    fuelPrice = 12.29;
+                    FuelPrice = 12.29;
                     break;
                 case "el":
-                    fuelPrice = 1.12;
+                    FuelPrice = 1.12;
                     break;
                 default:
                     Console.WriteLine("Fejl");
                     return 0;
             }
 
-            double fuelNeeded = distance / kmPrLiter;
-            double price = fuelNeeded * fuelPrice;
+            double FuelNeeded = distance / KmPrLiter;
+            double price = FuelNeeded * FuelPrice;
             return price;
         }
 
@@ -152,9 +153,9 @@ class Car
             while (true)
             {
                 Console.Write("Navn: ");
-                string carOwner = (Console.ReadLine() ?? "").Trim();
+                string CarOwner = (Console.ReadLine() ?? "").Trim();
 
-                if (carOwner == "")
+                if (CarOwner == "")
                     Console.WriteLine("Navn må ikke være tomt.");
 
                 else
@@ -168,8 +169,8 @@ class Car
             _model = Console.ReadLine();
 
             Console.WriteLine("Aar: ");
-            year = Console.ReadLine();
-            yearInt = int.Parse(year);
+            _year = Console.ReadLine();
+            yearInt = int.Parse(_year);
             _year = yearInt;
 
             Console.WriteLine("Gear: ");
@@ -180,13 +181,13 @@ class Car
             {
                 // få input fra bruger
                 Console.Write("Km per liter: ");
-                string kmPrLiterInput = Console.ReadLine();
+                string KmPrLiterInput = Console.ReadLine();
 
                 // tjek om input er double og output det til kmPrLiter hvis det er
-                if (double.TryParse(kmPrLiterInput))
+                if (double.TryParse(KmPrLiterInput))
                 {
                     // Opdater attribute og stop loopet hvis det er
-                    _kmPrLiter = double.Parse(kmPrLiterInput);
+                    _kmPrLiter = double.Parse(KmPrLiterInput);
                     break;
                 }
 
@@ -198,10 +199,10 @@ class Car
             while (true)
             {
                 Console.Write("Kilometerstand: ");
-                string odometerInput = Console.ReadLine();
+                string OdometerInput = Console.ReadLine();
 
-                if (double.TryParse(odometerInput))
-                    _odometer = double.Parse(odometerInput);
+                if (double.TryParse(OdometerInput))
+                    _odometer = double.Parse(OdometerInput);
                     break;
 
                 Console.WriteLine("Det er ikke et nummer");
@@ -210,15 +211,15 @@ class Car
 
             //gøres lidt anderledes med benz og diesel
             Console.WriteLine("benzin, diesel eller el?");
-            string fuelType = Console.ReadLine();
+            string FuelType = Console.ReadLine();
 
             while (true)
             {
                 // hvis det ikke er benzin/diesel/el
-                if (fuelType.ToLower() != "benzin" && fuelType.ToLower() != "diesel" && fuelType.ToLower() != "el")
+                if (FuelType.ToLower() != "benzin" && FuelType.ToLower() != "diesel" && FuelType.ToLower() != "el")
                 {
                     Console.Write("skriv lige benzin, diesel eller el: ");
-                    fuelType = Console.ReadLine();
+                    FuelType = Console.ReadLine();
                 }
                 else
                 {
@@ -226,7 +227,7 @@ class Car
                 }
             }
 
-            return carOwner;
+            return CarOwner;
         }
 
     }
