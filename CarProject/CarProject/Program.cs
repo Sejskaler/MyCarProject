@@ -14,7 +14,6 @@ namespace CarProject
             double Distance = 0.0;
 
             Car bil1 = new Car("", "", 0, '\0', 0.0, "", 0.0, false);
-            string carOwnerName = bil1.ReadCarDetails();
 
             //string bruger det samme som vores tuple
             //Dictionary<string, (string navn, string brand, string model, int year, char gear, string braendstof, double kmPerLiter, double distance, int kilometerStand)> biler = new Dictionary<string, (string, string, string, int, char, string, double, double, int)>(StringComparer.OrdinalIgnoreCase);

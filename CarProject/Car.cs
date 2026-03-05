@@ -1,20 +1,17 @@
 ﻿using System;
 
-class Car
-{
-    private class Car()
+public class Car()
     {
         private string _brand;
         private string _model;
         private int _year;
         private char _gear;
         private double _odometer;
-        private string _fuelType;
         private double _kmPrLiter;
         private bool _engineActive;
 
-        // Constructor
-        public Car(string Brand, string Model, int Year, char Gear, double Odometer, string FuelType, double KmPrLiter, bool EngineActive)
+    // Constructor
+    public Car(string Brand, string Model, int Year, char Gear, double Odometer, fuelType FuelType, double KmPrLiter, bool EngineActive) : this()
            
         {
             _brand = Brand;
@@ -22,9 +19,9 @@ class Car
             _year = Year;
             _gear = Gear;
             _odometer = Odometer;
-            _fuelType = FuelType;
+            fuelType = FuelType;
             _kmPrLiter = KmPrLiter;
-            _engineActive = engineActive;
+            _engineActive = EngineActive;
         }
 
         // Read-only property - brand
@@ -58,10 +55,7 @@ class Car
         }
 
         // Read-only property - fuelType
-        public string FuelType
-        {
-            get { return _fuelType; }
-        }
+        public fuelType fuelType { get; private set; }
 
         // Read-only property - kmPrLiter
         public double KmPrLiter
@@ -98,7 +92,10 @@ class Car
             }
 
             if (EngineActive)
-                _odometer += distance;
+                _odometer += Distance;
+            else
+                Console.WriteLine("Motoren er ikke tændt, måske skulle du tænde den først");
+                return _odometer;
           
         }
 
@@ -151,10 +148,11 @@ class Car
         public string ReadCarDetails()
         {
             // add navn osv.
+            string CarOwner;
             while (true)
             {
                 Console.Write("Navn: ");
-                string CarOwner = (Console.ReadLine() ?? "").Trim();
+                CarOwner = (Console.ReadLine() ?? "").Trim();
 
                 if (CarOwner == "")
                     Console.WriteLine("Navn må ikke være tomt.");
@@ -170,8 +168,8 @@ class Car
             _model = Console.ReadLine();
 
             Console.WriteLine("Aar: ");
-            _year = Console.ReadLine();
-            yearInt = int.Parse(_year);
+            string yearInput = Console.ReadLine();
+            int yearInt = int.Parse(yearInput);
             _year = yearInt;
 
             Console.WriteLine("Gear: ");
@@ -185,10 +183,10 @@ class Car
                 string KmPrLiterInput = Console.ReadLine();
 
                 // tjek om input er double og output det til kmPrLiter hvis det er
-                if (double.TryParse(KmPrLiterInput))
+                if (double.TryParse(KmPrLiterInput, out double KmPrLiterDouble))
                 {
                     // Opdater attribute og stop loopet hvis det er
-                    _kmPrLiter = double.Parse(KmPrLiterInput);
+                    _kmPrLiter = KmPrLiterDouble;
                     break;
                 }
 
@@ -202,8 +200,8 @@ class Car
                 Console.Write("Kilometerstand: ");
                 string OdometerInput = Console.ReadLine();
 
-                if (double.TryParse(OdometerInput))
-                    _odometer = double.Parse(OdometerInput);
+                if (double.TryParse(OdometerInput, out double OdometerDouble))
+                    _odometer = OdometerDouble;
                     break;
 
                 Console.WriteLine("Det er ikke et nummer");
@@ -233,7 +231,7 @@ class Car
 
     }
 
-}
+
     // To-do: lav en kort metode til at tænde og slukke bilen
 
 

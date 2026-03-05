@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Compile Include="..\Car.cs" Link="Car.cs" />
+    <Compile Include="..\FuelType.cs" Link="FuelType.cs" />
   </ItemGroup>
 
 </Project>
