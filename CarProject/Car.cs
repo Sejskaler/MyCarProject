@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarProject;
+using System;
 
 public class Car()
     {
@@ -9,6 +10,7 @@ public class Car()
         private double _odometer;
         private double _kmPrLiter;
         private bool _engineActive;
+        private List<Trip> _trips =  new List<Trip>();
 
     // Constructor
     public Car(string Brand, string Model, int Year, char Gear, double Odometer, fuelType FuelType, double KmPrLiter, bool EngineActive) : this()
@@ -23,6 +25,7 @@ public class Car()
             _kmPrLiter = KmPrLiter;
             _engineActive = EngineActive;
         }
+
 
         // Read-only property - brand
         public string Brand
@@ -78,119 +81,32 @@ public class Car()
         }
 
         // Method - Drive
-        public double Drive(double Odometer, bool EngineActive, double Distance)
+        public void Drive()
         {
-            while (true)
-            {
-                Console.Write("Distance: ");
-                string DistanceInput = Console.ReadLine();
+        Trip trip1 = new Trip(200, new DateTime(2026, 3, 5, 21, 15, 0), new DateTime(2026, 3, 5, 23, 30, 0), new Car("Nissan", "Qashqai", 2021, 'M', 130000, fuelType.Gasoline, 16.3, true));
 
-                if (double.TryParse(DistanceInput, out Distance))
-                    break;
+        _odometer += trip1.Distance;
+        _trips.Add (trip1);
 
-                Console.WriteLine("Det er ikke et tal");
-            }
-
-            if (EngineActive)
-                _odometer += Distance;
-            else
-                Console.WriteLine("Motoren er ikke tændt, måske skulle du tænde den først");
-                return _odometer;
-          
         }
 
+        // Method GetTrips
+
+         public List<Trip> GetTrips()
+          { return _trips; }
+
+ 
+          
+  
+     
 
        
 
         // Method - ReadCarDetails
-        public string ReadCarDetails()
-        {
-            // add navn osv.
-            string CarOwner;
-            while (true)
-            {
-                Console.Write("Navn: ");
-                CarOwner = (Console.ReadLine() ?? "").Trim();
-
-                if (CarOwner == "")
-                    Console.WriteLine("Navn må ikke være tomt.");
-
-                else
-                    break;
-            }
-
-            Console.WriteLine("Brand: ");
-            _brand = Console.ReadLine();
-
-            Console.WriteLine("Model: ");
-            _model = Console.ReadLine();
-
-            Console.WriteLine("Aar: ");
-            string yearInput = Console.ReadLine();
-            int yearInt = int.Parse(yearInput);
-            _year = yearInt;
-
-            Console.WriteLine("Gear: ");
-            _gear = char.Parse(Console.ReadLine());
-
-            // kmPrLiter - loopet er brugt 3 gange
-            while (true)
-            {
-                // få input fra bruger
-                Console.Write("Km per liter: ");
-                string KmPrLiterInput = Console.ReadLine();
-
-                // tjek om input er double og output det til kmPrLiter hvis det er
-                if (double.TryParse(KmPrLiterInput, out double KmPrLiterDouble))
-                {
-                    // Opdater attribute og stop loopet hvis det er
-                    _kmPrLiter = KmPrLiterDouble;
-                    break;
-                }
-
-                // hvis det ikke er en double, fortæl bruger
-                Console.WriteLine("Det er ikke et nummer");
-            }
-
-            // odometer - samme som tidligere
-            while (true)
-            {
-                Console.Write("Kilometerstand: ");
-                string OdometerInput = Console.ReadLine();
-
-                if (double.TryParse(OdometerInput, out double OdometerDouble))
-                    _odometer = OdometerDouble;
-                    break;
-
-                Console.WriteLine("Det er ikke et nummer");
-            }
-
-
-            //gøres lidt anderledes med benz og diesel
-            Console.WriteLine("benzin, diesel eller el?");
-            string FuelType = Console.ReadLine();
-
-            while (true)
-            {
-                // hvis det ikke er benzin/diesel/el
-                if (FuelType.ToLower() != "benzin" && FuelType.ToLower() != "diesel" && FuelType.ToLower() != "el")
-                {
-                    Console.Write("skriv lige benzin, diesel eller el: ");
-                    FuelType = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            return CarOwner;
-        }
+       
 
     }
 
-
-    // To-do: lav en kort metode til at tænde og slukke bilen
 
 
 

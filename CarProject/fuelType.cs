@@ -2,7 +2,7 @@
 
 public enum fuelType
 {
-    Benzin,
+    Gasoline,
     Diesel,
     Electric,
     Hybrid
