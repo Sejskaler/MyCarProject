@@ -14,15 +14,16 @@ class Car
         private bool _engineActive;
 
         // Constructor
-        public Car(string brand, string model, int year, char gear, double odometer, string fuelType, double kmPrLiter, bool engineActive)
+        public Car(string Brand, string Model, int Year, char Gear, double Odometer, string FuelType, double KmPrLiter, bool EngineActive)
+           
         {
-            _brand = brand;
-            _model = model;
-            _year = year;
-            _gear = gear;
-            _odometer = odometer;
-            _fuelType = fuelType;
-            _kmPrLiter = kmPrLiter;
+            _brand = Brand;
+            _model = Model;
+            _year = Year;
+            _gear = Gear;
+            _odometer = Odometer;
+            _fuelType = FuelType;
+            _kmPrLiter = KmPrLiter;
             _engineActive = engineActive;
         }
 

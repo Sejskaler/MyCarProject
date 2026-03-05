@@ -108,7 +108,7 @@ namespace CarProject
 
         static void PrintCarDetails(string fuelType, double kmPrLiter, double odometer, double distance)
         {
-        Console.WriteLine($"Brændstofstype: {fuelType}, km/l: {kmPrLiter}, oprindelig km stand: {odometer} ny kilometerstand {odometer + distance} det koster: {Math.Round(CalculateTripPrice(braendstof, kmPerLiter, 0))}");
+        Console.WriteLine($"Brændstofstype: {fuelType}, km/l: {kmPrLiter}, oprindelig km stand: {Odometer} ny kilometerstand {odometer + distance} det koster: {Math.Round(CalculateTripPrice(fuelType, kmPerLiter, 0))}");
         }
 
 
