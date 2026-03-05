@@ -100,49 +100,7 @@ public class Car()
         }
 
 
-        // Method - CalculateTripPrice
-        public double CalculateTripPrice(string FuelType, double KmPrLiter, double FuelPrice, double distance)
-        {
-            Console.WriteLine("Vi kan ikke beregne en køretur uden distance");
-//            while (_kmPrLiter == 0)
-//            {
-//                Console.WriteLine("Indtast over 0. \n Km per liter?");
-//                string kmPrLiterInput = Console.ReadLine();
-//                if (double.TryParse(kmPrLiterInput, out kmPrLiter))
-//                    break;
-//            }
-//
-            while (true)
-            {
-                Console.Write("Distance: ");
-                string distanceInput = Console.ReadLine();
-
-                if (double.TryParse(distanceInput, out distance))
-                    break;
-
-                Console.WriteLine("Det er ikke et nummer");
-            }
-
-            switch (FuelType.ToLower())
-            {
-                case "benzin":
-                    FuelPrice = 13.49;
-                    break;
-                case "diesel":
-                    FuelPrice = 12.29;
-                    break;
-                case "el":
-                    FuelPrice = 1.12;
-                    break;
-                default:
-                    Console.WriteLine("Fejl");
-                    return 0;
-            }
-
-            double FuelNeeded = distance / KmPrLiter;
-            double price = FuelNeeded * FuelPrice;
-            return price;
-        }
+       
 
         // Method - ReadCarDetails
         public string ReadCarDetails()
