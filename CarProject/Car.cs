@@ -75,15 +75,21 @@ public class Car()
     public bool EngineActive
     {
         get { return _engineActive; }
-        set
-        {
-            if (EngineActive == false)
-                _engineActive = true;
-
-            else
-                _engineActive = false;
-        }
+       
+       
     }
+
+
+    //Method TurnOnEngine
+
+    public void TurnOnEngine()
+        {
+        if (_engineActive == false)
+            _engineActive = true;
+
+        else
+            _engineActive = false;
+         }
 
     // Method - Drive
     public Trip Drive(Trip trip)
@@ -118,14 +124,15 @@ public class Car()
     {
     foreach (Trip trip in _trips) 
         {
-            if (trip.StartTime.Date == date)
+            if (trip.StartTime.Date == date.Date)
             {
                 _tripsByDate.Add(trip);
+                Console.WriteLine($"{trip} tilføjet");
             }
 
             else
             {
-
+                Console.WriteLine($"{trip} ikke tilføjet");
             }
         }
         return (_tripsByDate);
