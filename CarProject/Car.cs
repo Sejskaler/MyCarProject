@@ -122,7 +122,7 @@ public class Car()
     public List<Trip> GetTripsByDate(DateTime date)
 
     {
-    foreach (Trip trip in _trips) 
+        foreach (Trip trip in _trips) 
         {
             if (trip.StartTime.Date == date.Date)
             {

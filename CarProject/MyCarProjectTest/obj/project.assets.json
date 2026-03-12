@@ -2291,19 +2291,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Christina\\.nuget\\packages\\": {}
+    "C:\\Users\\broly\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\MyCarProjectTest\\MyCarProjectTest.csproj",
+      "projectUniqueName": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\MyCarProjectTest\\MyCarProjectTest.csproj",
       "projectName": "MyCarProjectTest",
-      "projectPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\MyCarProjectTest\\MyCarProjectTest.csproj",
-      "packagesPath": "C:\\Users\\Christina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\MyCarProjectTest\\obj\\",
+      "projectPath": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\MyCarProjectTest\\MyCarProjectTest.csproj",
+      "packagesPath": "C:\\Users\\broly\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\MyCarProjectTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Christina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\broly\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2317,8 +2317,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj": {
-              "projectPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj"
+            "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj": {
+              "projectPath": "C:\\Users\\broly\\source\\repos\\MyCarProject\\CarProject\\CarProject\\CarProject.csproj"
             }
           }
         }
@@ -2360,7 +2360,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.104/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

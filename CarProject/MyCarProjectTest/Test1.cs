@@ -10,31 +10,33 @@ namespace MyCarProjectTest
 
         public void GetTripsByDate_ReturnsMatchingTrips()
         { 
-    // Arrange 
+            // Arrange 
 
-    Car car = new Car("Toyota", "Corolla", 2020, 'M', 100000, fuelType.Gasoline, 22.5, false);
+            Car car = new Car("Toyota", "Corolla", 2020, 'M', 100000, fuelType.Gasoline, 22.5, false);
 
-        car.TurnOnEngine(); 
+            car.TurnOnEngine(); 
 
-    DateTime today = new DateTime(2024, 6, 1, 10, 0, 0);
+            DateTime today = new DateTime(2026, 3, 12, 10, 0, 0);
 
             Trip trip1 = new Trip(50, DateTime.Now, DateTime.Now.AddHours(1), car);
             Trip trip2 = new Trip(30, DateTime.Now, DateTime.Now.AddMinutes(30), car);
             Trip trip3 = new Trip(100, DateTime.Now, DateTime.Now.AddHours(2), car);
 
-        car.Drive(trip1); car.Drive(trip2); car.Drive(trip3); 
+            car.Drive(trip1); car.Drive(trip2); car.Drive(trip3); 
 
  
 
-         // Act 
+            // Act 
 
-         List<Trip> result = car.GetTripsByDate(today.Date);
+            List<Trip> result = car.GetTripsByDate(today);
+            List<Trip> result2 = car.GetTripsByDate(new DateTime(2025, 3, 12, 10, 0, 0));
 
 
 
-        // Assert 
+            // Assert 
 
-        Assert.AreEqual(3, result.Count); 
+            Assert.AreEqual(3, result.Count()); // Test returner expected på 3
+            Assert.AreEqual(4, result2.Count()); // Test fejler da den forventer 4
 
         }
     }
