@@ -18,11 +18,13 @@ namespace CarProject
             Car myCar = new Car("Nissan", "Qashqai", 2021, 'M', 130000, fuelType.Gasoline, 16.3, false);
 
             List<Trip> trips = new List<Trip>
-        {
+        
+            {
             new Trip(50,  DateTime.Now, DateTime.Now.AddHours(1), myCar),
             new Trip(30,  DateTime.Now, DateTime.Now.AddMinutes(30), myCar),
             new Trip(100, DateTime.Now, DateTime.Now.AddHours(2), myCar)
-        };
+            };
+            
             foreach (var trip in trips)
             {
                 myCar.Drive(trip);
