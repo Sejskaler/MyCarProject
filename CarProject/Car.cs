@@ -12,10 +12,11 @@ public class Car()
     private double _kmPrLiter;
     private bool _engineActive;
     private List<Trip> _trips = [];
+    private List<Trip> _tripsByDate = [];
 
     // Constructor
     public Car(string Brand, string Model, int Year, char Gear, double Odometer, fuelType FuelType, double KmPrLiter, bool EngineActive) : this()
-           
+
     {
         _brand = Brand;
         _model = Model;
@@ -99,7 +100,7 @@ public class Car()
         {
             for (int i = 0; i < _trips.Count; i++)
             {
-                Console.WriteLine($"trip {i+1} = {_trips[i].Distance}");
+                Console.WriteLine($"trip {i + 1} = {_trips[i].Distance}");
             }
             return _trips;
         }
@@ -110,9 +111,25 @@ public class Car()
 
 
 
-    // Method - ReadCarDetails
+    // Method - GetTripsByDate
 
+    public List<Trip> GetTripsByDate(DateTime date)
 
+    {
+    foreach (Trip trip in _trips) 
+        {
+            if (trip.StartTime.Date == date)
+            {
+                _tripsByDate.Add(trip);
+            }
+
+            else
+            {
+
+            }
+        }
+        return (_tripsByDate);
+    }
 }
 
 

@@ -31,6 +31,11 @@ namespace CarProject
             }
             myCar.GetTrips();
 
+            List<Trip> trips2 = myCar.GetTripsByDate(DateTime.Now);
+            foreach (Trip trip in trips2)
+            {
+                Console.WriteLine(trip);
+            }
 
         }
 

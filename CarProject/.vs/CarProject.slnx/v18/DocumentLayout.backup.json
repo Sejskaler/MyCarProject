@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\",
+  "WorkspaceRootPath": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\carproject\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:carproject\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\users\\christina\\desktop\\visual studio projekter\\mycarproject\\mycarproject\\carproject\\carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:carproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\codeprojects\\car\\mycarproject\\carproject\\fueltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\users\\christina\\desktop\\visual studio projekter\\mycarproject\\mycarproject\\carproject\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\users\\christina\\desktop\\visual studio projekter\\mycarproject\\mycarproject\\carproject\\fueltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:fueltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|c:\\users\\christina\\desktop\\visual studio projekter\\mycarproject\\mycarproject\\carproject\\carproject\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42ABD72F-FEF6-8A91-5694-46530CC8C5B7}|CarProject\\CarProject.csproj|solutionrelative:carproject\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\Car.cs",
-              "RelativeDocumentMoniker": "Car.cs",
-              "ToolTip": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\Car.cs*",
-              "RelativeToolTip": "Car.cs*",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAIwGYAAAApAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Trip.cs",
+              "DocumentMoniker": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\Trip.cs",
+              "RelativeDocumentMoniker": "CarProject\\Trip.cs",
+              "ToolTip": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\Trip.cs",
+              "RelativeToolTip": "CarProject\\Trip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T08:41:40.057Z",
+              "WhenOpened": "2026-03-05T11:21:13.332Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -46,46 +47,42 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FuelType.cs",
-              "DocumentMoniker": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\fuelType.cs",
+              "DocumentMoniker": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\fuelType.cs",
               "RelativeDocumentMoniker": "fuelType.cs",
-              "ToolTip": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\fuelType.cs",
+              "ToolTip": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\fuelType.cs",
               "RelativeToolTip": "fuelType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T08:41:39.146Z",
+              "WhenOpened": "2026-03-05T12:49:31.876Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Trip.cs",
-              "DocumentMoniker": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Trip.cs",
-              "RelativeDocumentMoniker": "CarProject\\Trip.cs",
-              "ToolTip": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Trip.cs",
-              "RelativeToolTip": "CarProject\\Trip.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\Car.cs",
+              "RelativeDocumentMoniker": "Car.cs",
+              "ToolTip": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\Car.cs",
+              "RelativeToolTip": "Car.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T08:40:13.965Z",
+              "WhenOpened": "2026-03-05T11:20:46.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\Program.cs",
               "RelativeDocumentMoniker": "CarProject\\Program.cs",
-              "ToolTip": "C:\\codeprojects\\car\\MyCarProject\\CarProject\\CarProject\\Program.cs",
-              "RelativeToolTip": "CarProject\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAIA8wBsAAAAiAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Christina\\Desktop\\Visual studio projekter\\MyCarProject\\MyCarProject\\CarProject\\CarProject\\Program.cs*",
+              "RelativeToolTip": "CarProject\\Program.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T12:34:18.558Z",
+              "WhenOpened": "2026-02-12T08:54:01.89Z",
               "EditorCaption": ""
             }
           ]
