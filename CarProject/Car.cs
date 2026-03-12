@@ -1,21 +1,22 @@
 ﻿using CarProject;
 using System;
+using System.Runtime.CompilerServices;
 
 public class Car()
-    {
-        private string _brand;
-        private string _model;
-        private int _year;
-        private char _gear;
-        private double _odometer;
-        private double _kmPrLiter;
-        private bool _engineActive;
-        private List<Trip> _trips =  new List<Trip>();
+{
+    private string _brand;
+    private string _model;
+    private int _year;
+    private char _gear;
+    private double _odometer;
+    private double _kmPrLiter;
+    private bool _engineActive;
+    private List<Trip> _trips = [];
 
     // Constructor
     public Car(string Brand, string Model, int Year, char Gear, double Odometer, fuelType FuelType, double KmPrLiter, bool EngineActive) : this()
            
-        {
+    {
             _brand = Brand;
             _model = Model;
             _year = Year;
@@ -24,7 +25,7 @@ public class Car()
             fuelType = FuelType;
             _kmPrLiter = KmPrLiter;
             _engineActive = EngineActive;
-        }
+    }
 
 
         // Read-only property - brand
@@ -66,8 +67,11 @@ public class Car()
             get { return _kmPrLiter; }
         }
 
-        // Property with validation - engineActive
-        public bool EngineActive
+
+
+
+    // Property with validation - engineActive
+    public bool EngineActive
         {
             get { return _engineActive; }
             set
@@ -81,31 +85,35 @@ public class Car()
         }
 
         // Method - Drive
-        public void Drive()
-        {
-        Trip trip1 = new Trip(200, new DateTime(2026, 3, 5, 21, 15, 0), new DateTime(2026, 3, 5, 23, 30, 0), new Car("Nissan", "Qashqai", 2021, 'M', 130000, fuelType.Gasoline, 16.3, true));
-
-        _odometer += trip1.Distance;
-        _trips.Add (trip1);
-
-        }
-
-        // Method GetTrips
-
-         public List<Trip> GetTrips()
-          { return _trips; }
-
- 
-          
-  
-     
-
-       
-
-        // Method - ReadCarDetails
-       
-
+    public Trip Drive(Trip trip)
+    {
+        _trips.Add(trip);
+        _odometer += trip.Distance;
+        return trip;
     }
+
+    // Method GetTrips
+
+    public List<Trip> GetTrips()
+    {
+        {
+            for (int i = 0; i < _trips.Count; i++)
+            {
+                Console.WriteLine($"trip {i+1} = {_trips[i].Distance}");
+            }
+            return _trips;
+        }
+    }
+
+
+
+
+
+
+    // Method - ReadCarDetails
+
+
+}
 
 
 

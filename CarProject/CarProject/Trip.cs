@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CarProject
 {
-    internal class Trip
+    public class Trip
     {
         private double _distance;
         private DateTime _startTime;
